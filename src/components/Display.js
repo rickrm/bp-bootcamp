@@ -3,6 +3,7 @@
  */
 import React from 'react';
 import BasicTable from './BasicTable';
+import Leaderboard from './Leaderboard';
 import firebase from 'firebase';
 import 'firebase/firestore';
 
@@ -56,6 +57,7 @@ class Display extends React.Component {
   render() {
     return (
       <div className="display-container">
+        <Leaderboard data={this.state.dataPostgres}/>
         <h2>Local Data Handling</h2>
         <BasicTable data={this.state.dataPostgres} />
         <h2>Global Data Handling</h2>
